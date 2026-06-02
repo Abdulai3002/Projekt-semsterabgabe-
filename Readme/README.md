@@ -16,7 +16,7 @@ Divine Kennith Samgi Ngongang      Matrikel: 20246936
 
 Eingabeparameter:
 
-1:generation  (e30, e36, e46)
+1:generation  (e30, e36, e39)
 
 2:preis in Euro
 
