@@ -46,6 +46,10 @@
     input[type="submit"]:hover {
         background-color: #1558b0;
     }
+    footer {
+        margin-top: 20px;
+        text-align: center;
+    }
 </style>
 
 </head>
@@ -59,6 +63,7 @@
         <!-- PARAMETER 1: MODELL -->
         <label for="modell">Modell auswählen:</label>
         <select id="modell" name="modell" required>
+            <option value="" disabled selected>Bitte Modell wählen…</option>
             <option value="E30">BMW E30</option>
             <option value="E36">BMW E36</option>
             <option value="E39">BMW E39</option>
@@ -67,6 +72,7 @@
         <!-- PARAMETER 2: ZUSTAND -->
         <label for="zustand">Zustand des Fahrzeugs:</label>
         <select id="zustand" name="zustand" required>
+            <option value="" disabled selected>Bitte Zustand wählen…</option>
             <option value="Top Zustand">Top Zustand</option>
             <option value="Gut">Gut</option>
             <option value="Restaurationsbedürftig">Restaurationsbedürftig</option>
@@ -75,6 +81,7 @@
         <!-- PARAMETER 3: BAUJAHR -->
         <label for="baujahr">Baujahr:</label>
         <select id="baujahr" name="baujahr" required>
+            <option value="" disabled selected>Bitte Baujahr wählen…</option>
             <option value="1985">1985</option>
             <option value="1988">1988</option>
             <option value="1990">1990</option>
@@ -87,6 +94,10 @@
 
         <input type="submit" value="Ergebnisse anzeigen">
     </form>
+    
+    <footer>
+        <a href="https://github.com/Abdulai3002/Projekt-semsterabgabe-">GitHub Repository</a>
+    </footer>
 </div>
 
 </body>
