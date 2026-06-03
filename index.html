@@ -1,48 +1,93 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <title>BMW 3er AUTOHAENDLER</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<title>BMW Oldtimer Auswahl</title>
+
+<style>
+    body {
+        font-family: Arial;
+        background-color: #F2F2F2;
+        margin: 0;
+        padding: 0;
+    }
+    .container {
+        width: 60%;
+        margin: 50px auto;
+        background: white;
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0 0 20px rgba(0,0,0,0.15);
+    }
+    h1 {
+        text-align: center;
+        color: #1C69D4;
+    }
+    label {
+        font-weight: bold;
+    }
+    select, input {
+        width: 100%;
+        padding: 10px;
+        margin-top: 5px;
+        margin-bottom: 20px;
+        border-radius: 6px;
+        border: 1px solid #ccc;
+    }
+    input[type="submit"] {
+        background-color: #1C69D4;
+        color: white;
+        border: none;
+        cursor: pointer;
+        font-size: 16px;
+        padding: 12px;
+        border-radius: 8px;
+    }
+    input[type="submit"]:hover {
+        background-color: #1558b0;
+    }
+</style>
+
 </head>
 <body>
-    <div class="container">
-        <h1>BMW AutoHändler</h1>
-        <p>Willkommen in Unserem Geschäft</p>
-        <p>Hier finden Sie Ihr Traumauto</p>
 
-	<form action="./cgi-bin/auto-suche.cgi" >
-            <label>Generation</label>
-            <select name="generation">
-                <option value="">Alle</option>
-                <option value="E30">E30 (1982-1994)</option>
-                <option value="E36">E36 (1990-2000)</option>
-                <option value="E39">E39 (1998-2006)</option>
-            </select>
+<div class="container">
+    <h1>BMW Oldtimer Auswahl</h1>
 
-        <label>Maximalpreis €</label>
-	<select name="preis">
-	<option value="3500">3.500 €</option>
-    	<option value="5000">5.000 €</option>
-    	<option value="8000">8.000 €</option>
-	<option value="10000">10.000 €</option>
-	</select>	
+    <form action="/~sagmingo/cgi-bin/formular.cgi" method="POST">
 
-            <label>Leistung (PS):</label>
-            <select name="leistung">
-                <option value="">Alle</option>
-                <option value="bis100">bis 100 PS</option>
-                <option value="100-150">100-150 PS</option>
-                <option value="150-200">150-200 PS</option>
-                <option value="200plus">über 200 PS</option>
-            </select>
+        <!-- PARAMETER 1: MODELL -->
+        <label for="modell">Modell auswählen:</label>
+        <select id="modell" name="modell" required>
+            <option value="E30">BMW E30</option>
+            <option value="E36">BMW E36</option>
+            <option value="E39">BMW E39</option>
+        </select>
 
-            <button type="submit">Suchen</button>
-        </form>
+        <!-- PARAMETER 2: ZUSTAND -->
+        <label for="zustand">Zustand des Fahrzeugs:</label>
+        <select id="zustand" name="zustand" required>
+            <option value="Top Zustand">Top Zustand</option>
+            <option value="Gut">Gut</option>
+            <option value="Restaurationsbedürftig">Restaurationsbedürftig</option>
+        </select>
 
-        <footer>
-            <a href="https://github.com/Abdulai3002/Projekt-semsterabgabe-">GitHub Repository</a>
-        </footer>
-    </div>
+        <!-- PARAMETER 3: BAUJAHR -->
+        <label for="baujahr">Baujahr:</label>
+        <select id="baujahr" name="baujahr" required>
+            <option value="1985">1985</option>
+            <option value="1988">1988</option>
+            <option value="1990">1990</option>
+            <option value="1993">1993</option>
+            <option value="1996">1996</option>
+            <option value="1999">1999</option>
+            <option value="2001">2001</option>
+            <option value="2003">2003</option>
+        </select>
+
+        <input type="submit" value="Ergebnisse anzeigen">
+    </form>
+</div>
+
 </body>
 </html>
