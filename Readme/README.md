@@ -16,15 +16,15 @@ Divine Kennith Samgi Ngongang      Matrikel: 20246936
 
 Eingabeparameter:
 
-1:generation  (e30, e36, e39)
+1:Modell (e30, e36, e39)
 
-2:preis in Euro
+2:Zustand
 
-3:leistung  (100ps-200ps)
+3:Baujahr
 
 URL
 
-http://pan.th-brandenburg.de/~machamed/index.html
+http://pan.th-brandenburg.de/~sagmingo/index.html
 
 Github
 
